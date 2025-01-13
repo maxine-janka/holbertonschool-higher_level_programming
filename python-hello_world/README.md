@@ -1,0 +1,1 @@
+This repository contains projects Python - Hello, World. For Holberton School Australia By Maxine Janka

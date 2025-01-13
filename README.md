@@ -1,0 +1,1 @@
+This repository contains projects for Sprint 2 - Higher level Programming for Holberton School Australia. By Maxine Janka
