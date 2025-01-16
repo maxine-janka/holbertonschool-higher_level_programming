@@ -10,5 +10,8 @@ def uppercase(str):
         letter = ord(char)  # Return int for unicode char
         if letter >= 97 and letter <= 122:
             char = chr(letter - 32)  # Convert back to uppercase char
-        print(char, end="")
+        print("{}".format(char), end="")
     print()
+
+uppercase("best")
+uppercase("Best School 98 Battery street")
