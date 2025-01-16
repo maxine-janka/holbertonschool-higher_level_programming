@@ -12,6 +12,3 @@ def uppercase(str):
             char = chr(letter - 32)  # Convert back to uppercase char
         print("{}".format(char), end="")
     print()
-
-uppercase("best")
-uppercase("Best School 98 Battery street")
