@@ -1,0 +1,1 @@
+This projects contains tasks for Programming in Python - import & modules. For Holberton School Australia. By Maxine Janka
