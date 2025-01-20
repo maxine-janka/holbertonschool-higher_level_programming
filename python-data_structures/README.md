@@ -1,0 +1,1 @@
+This projects contains tasks for programming in Python - Data Structures: Lists, Tuples. For Holberton School Australia. By Maxine janka
