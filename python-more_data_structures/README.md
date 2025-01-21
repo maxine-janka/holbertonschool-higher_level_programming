@@ -1,0 +1,1 @@
+This projects contains tasks for programming in Python - More Data Structures: Set, Dictionary. For Holberton School Australia. By Maxine Janka.
