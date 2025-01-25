@@ -1,0 +1,1 @@
+This projects contains tasks for programming in Python - Test-driven development. For Holberton School Australia. By Maxine Janka.
