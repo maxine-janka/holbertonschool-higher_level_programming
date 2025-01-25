@@ -18,14 +18,15 @@ def roman_to_int(roman_string):
     }
 
     num_result = 0
-    # Interate through str
     for i in range(len(roman_string)):
-        # Check current char is not the last one
-        if (i + 1 < len(roman_string)) and roman[roman_string[i]] < roman[roman_string[i + 1]]:
-            # Subtract it from the current value
-            num_result -= roman[roman_string[i]]
-        else:
-            # Otherwise add the value
-            num_result += roman[roman_string[i]]
+        # Check next char is not the last one
+        if (i + 1 < len(roman_string)):
+            # Check if current is less than next
+            if roman[roman_string[i]] < roman[roman_string[i + 1]]:
+                # if yes, subtract it from the current value
+                num_result -= roman[roman_string[i]]
+            else:
+                # Otherwise add the value
+                num_result += roman[roman_string[i]]
 
     return num_result
