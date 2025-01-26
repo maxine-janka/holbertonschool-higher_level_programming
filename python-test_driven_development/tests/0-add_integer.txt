@@ -1,6 +1,6 @@
-The ``add_integer`` module
+The ``0-add_integer`` module
 ==========================
-``add_integer() `` returns the sum of its arguments `a` and `b`.
+``add_integer(a, b=98) `` returns the sum of its arguments `a` and `b`.
 Both arguments must be integers or floats, otherwise a TypeError is raised.
 
 Using ``add_integer``
@@ -42,7 +42,7 @@ Test cases:
     Only one argument, b is 98 by default
         >>> add(2)
         100
-        
+
     No arguments:
         >>> add()
         Traceback (most recent call last):
