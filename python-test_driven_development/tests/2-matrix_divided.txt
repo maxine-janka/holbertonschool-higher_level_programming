@@ -76,3 +76,9 @@ Test cases:
         ...
         TypeError: div must be a number
     
+    div is infinite integer:
+        >>> matrix = [[2, 4, 6], [8, 10, 12]]
+        >>> matrix_divided(matrix, float('inf'))
+        [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+        >>> matrix
+        [[2, 4, 6], [8, 10, 12]]
