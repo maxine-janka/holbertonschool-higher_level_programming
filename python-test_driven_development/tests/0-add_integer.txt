@@ -27,6 +27,12 @@ Test cases:
         >>> add(1.2, 10)
         11
 
+    Float Nan:
+        >>> add(float('NaN'), 2)
+        Traceback (most recent call last):
+        ...
+        ValueError: cannot convert float NaN to integer
+
     Float overflow:
         >>> add(1e400, 2)
         Traceback (most recent call last):
@@ -36,7 +42,7 @@ Test cases:
     Only one argument, b is 98 by default
         >>> add(2)
         100
-
+        
     No arguments:
         >>> add()
         Traceback (most recent call last):
