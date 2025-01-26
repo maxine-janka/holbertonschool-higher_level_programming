@@ -13,12 +13,6 @@ First import the function ``matrix_divided`` from the module ``2-matrix_divided`
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Test cases:
-
-    Empty matrix:
-        >>> matrix = []
-        >>> matrix_divided(matrix, 2)
-        >>> matrix
-        []
     
     Rows of unequal size:
         >>> matrix = [[2, 4, 6], [8, 10, 12, 20]]
@@ -47,22 +41,35 @@ Test cases:
         Traceback (most recent call last):
         ...
         TypeError: matrix must be a matrix (list of lists) of integers/floats
+    
+    No arguments:
+        >>> matrix_divided()
+        Traceback (most recent call last):
+        ...
+        TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
-    Div is 0:
+    No div:
+        >>> matrix = [[4, 5, 6], [7, 8, 9]]
+        >>> matrix_divided(matrix)
+        Traceback (most recent call last):
+        ...
+        TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+    div is 0:
         >>> matrix = [[2, 4, 6], [8, 10, 12]]
         >>> matrix_divided(matrix, 0)
         Traceback (most recent call last):
         ...
         ZeroDivisionError: division by zero
 
-    Div is a float:
+    div is a float:
         >>> matrix = [[2, 4, 6], [8, 10, 12]]
         >>> matrix_divided(matrix, 2.5)
         [[0.8, 1.6, 2.4], [3.2, 4.0, 4.8]]
         >>> matrix
         [[2, 4, 6], [8, 10, 12]]
 
-    Div is an non-number:
+    div is an non-number:
         >>> matrix = [[2, 4, 6], [8, 10, 12]]
         >>> matrix_divided(matrix, "d")
         Traceback (most recent call last):
