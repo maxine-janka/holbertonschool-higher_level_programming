@@ -1,0 +1,62 @@
+The ``add_integer`` module
+==========================
+``add_integer() `` returns the sum of its arguments `a` and `b`.
+Both arguments must be integers or floats, otherwise a TypeError is raised.
+
+Using ``add_integer``
+---------------------
+
+First import the function ``add_integer`` from the module ``0-add_integer``
+    >>> add = __import__('0-add_integer').add_integer
+
+Test cases:
+
+    Regular addition:
+        >>> add(1, 10)
+        11
+
+    Two negative integers:
+        >>> add(-1, -1)
+        -2
+
+    Negative and positive integer:
+        >>> add(-1, 10)
+        9
+
+    Floats are casted to integers:
+        >>> add(1.2, 10)
+        11
+
+    Only one argument, b is 98 by default
+        >>> add(2)
+        100
+    
+    No arguments:
+        >>> add()
+        Traceback (most recent call last):
+        ...
+        TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    Argument a is None
+        >>> add(None)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+    With three arguments:
+        >>> add(1, 10, 3)
+        Traceback (most recent call last):
+        ...
+        TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+    Integer a and string:
+        >>> add(4, "school")
+        Traceback (most recent call last):
+        ...
+        TypeError: b must be an integer
+
+    Integer b and string:
+        >>> add("school", 4)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
