@@ -1,0 +1,71 @@
+The ``2-matrix_divided`` module
+===============================
+``matrix_divided(matrix, div)`` divides all elements of a matrix and
+returns a new matrix, with each return element rounded to 2 decimal places.
+The Matrix must be a list of lists containing integers or floats only.
+Each row of the matrix must be the same size. The div must be an int or a float
+and cannot be 0. 
+
+Using ``matrix_divided``
+-----------------------
+
+First import the function ``matrix_divided`` from the module ``2-matrix_divided``
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test cases:
+
+    Empty matrix:
+        >>> matrix = []
+        >>> matrix_divided(matrix, 2)
+        >>> matrix
+        []
+    
+    Rows of unequal size:
+        >>> matrix = [[2, 4, 6], [8, 10, 12, 20]]
+        >>> matrix_divided(matrix, 10)
+        Traceback (most recent call last):
+        ...
+        TypeError: Each row of the matrix must have the same size
+
+    Regular division with integers:
+        >>> matrix = [[1, 2, 3], [4, 5, 6]]
+        >>> matrix_divided(matrix, 2)
+        [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+        >>> matrix
+        [[1, 2, 3], [4, 5, 6]]
+    
+    Intergers and floats in matrix:
+        >>> matrix = [[10.2, 20, 22.5], [6.4, 7, 19]]
+        >>> matrix_divided(matrix, 2)
+        [[5.1, 10.0, 11.25], [3.2, 3.5, 9.5]]
+        >>> matrix
+        [[10.2, 20, 22.5], [6.4, 7, 19]]
+
+    Non-numbers in matrix:
+        >>> matrix = [[10.2, 20, "a"], [6.4, 7, 19]]
+        >>> matrix_divided(matrix, 2)
+        Traceback (most recent call last):
+        ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    Div is 0:
+        >>> matrix = [[2, 4, 6], [8, 10, 12]]
+        >>> matrix_divided(matrix, 0)
+        Traceback (most recent call last):
+        ...
+        ZeroDivisionError: division by zero
+
+    Div is a float:
+        >>> matrix = [[2, 4, 6], [8, 10, 12]]
+        >>> matrix_divided(matrix, 2.5)
+        [[0.8, 1.6, 2.4], [3.2, 4.0, 4.8]]
+        >>> matrix
+        [[2, 4, 6], [8, 10, 12]]
+
+    Div is an non-number:
+        >>> matrix = [[2, 4, 6], [8, 10, 12]]
+        >>> matrix_divided(matrix, "d")
+        Traceback (most recent call last):
+        ...
+        TypeError: div must be a number
+    
