@@ -27,10 +27,16 @@ Test cases:
         >>> add(1.2, 10)
         11
 
+    Float overflow:
+        >>> add(1e400, 2)
+        Traceback (most recent call last):
+        ...
+        OverflowError: cannot convert float infinity to integer
+
     Only one argument, b is 98 by default
         >>> add(2)
         100
-    
+
     No arguments:
         >>> add()
         Traceback (most recent call last):
@@ -42,7 +48,7 @@ Test cases:
         Traceback (most recent call last):
         ...
         TypeError: a must be an integer
-
+    
     With three arguments:
         >>> add(1, 10, 3)
         Traceback (most recent call last):
