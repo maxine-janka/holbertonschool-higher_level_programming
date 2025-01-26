@@ -14,7 +14,7 @@ First import the function ``say_my_name`` from the module ``3-say_my_name``
 Test cases:
 
     Regular strings:
-        >>> say_my_name(first_name, last_name)
+        >>> say_my_name("Michael", "Scott")
         My name is Michael Scott
     
     One argument:
