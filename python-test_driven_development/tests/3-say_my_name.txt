@@ -25,7 +25,7 @@ Test cases:
         >>> say_my_name("Pam", 8)
         Traceback (most recent call last):
         ...
-         TypeError: last_name must be a string
+        TypeError: last_name must be a string
     
     More than 2 arguments:
         >>> say_my_name("Dwight", "Kurt", "Schrute")
