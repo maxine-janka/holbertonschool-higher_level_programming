@@ -1,0 +1,42 @@
+The ``5-text_indentation`` module
+===============================
+``text_indentation(text)`` prints a passage of text with 2 new lines after
+each of these characters . ? and :. No spaces at the beginning or at the end of each printed line.
+
+Using ``text_indentation``
+-----------------------
+
+First import the function ``text_indentation`` from the module ``5-text_indentation``
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test cases:
+
+    text with special characters:
+        >>> text_indentation("On Wednesdays we wear pink. Is butter a carb? That's so fetch: I'm not like a regular Mum, I'm a cool Mum")
+        On Wednesdays we wear pink.
+        <BLANKLINE>
+        Is butter a carb?
+        <BLANKLINE>
+        That's so fetch:
+        <BLANKLINE>
+        I'm not like a regular Mum, I'm a cool Mum
+  
+    text with no special characters:
+        >>> text_indentation("She doesn't even go here, she doesnt even go here!")
+        She doesn't even go here, she doesnt even go here!
+    
+     text with spaces:
+        >>> text_indentation("      I'm a cool Mum       ")
+        I'm a cool Mum
+
+    text is not a string:  
+        >>> text_indentation(123456)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+    
+    No arguments:
+        >>> text_indentation()
+        Traceback (most recent call last):
+        ...
+        TypeError: text_indentation() missing 1 required positional argument: 'text'
