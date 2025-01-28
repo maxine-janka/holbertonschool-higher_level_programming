@@ -13,7 +13,7 @@ class Square:
             position[1] is the printed spaces to the left of the square.
     """
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initialises an instance of Square"""
 
         if not isinstance(size, int):
@@ -56,7 +56,7 @@ class Square:
         else:
             print("\n" * self.position[1], end="")
             for space in range(self.size):
-                print("a" * self.position[0], end="")
+                print(" " * self.position[0], end="")
                 for hash in range(self.size):
                     print("#", end="")
                 print()
@@ -65,7 +65,7 @@ class Square:
     def position(self):
         """Getter method for the position of the square"""
         return self.__position
-   
+
     @position.setter
     def position(self, value):
         if not isinstance(value, tuple) or len(value) != 2:
