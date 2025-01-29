@@ -6,7 +6,7 @@
 class Square:
     """This is a definition of a square
         Attributes:
-            size (int): Contains the length of a side of a square
+            size (int): Contains the length of the sides of a square.
     """
 
     def __init__(self, size=0):
