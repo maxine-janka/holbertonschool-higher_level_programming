@@ -1,0 +1,86 @@
+The ``1-my_list`` module
+==========================
+This module define a class ``MyList`` that inherits from
+Python's built-in class ``list``
+
+Using ``print_sorted``
+---------------------
+``MyList`` defines a single public instance method ``print_sorted(self)``.
+It prints a copy of a list in ascending order. All elements must be of the
+same data type.
+
+First import the class ``MyList`` from the module ``1-my_list``
+    >>> MyList = __import__('1-my_list').MyList
+
+    Print a list and sort:
+    The original list is not modified.
+        >>> my_list = MyList()
+        >>> my_list.append(1)
+        >>> my_list.append(4)
+        >>> my_list.append(2)
+        >>> my_list.append(3)
+        >>> my_list.append(5)
+        >>> print(my_list)
+        [1, 4, 2, 3, 5]
+        >>> my_list.print_sorted()
+        [1, 2, 3, 4, 5]
+        >>> print(my_list)
+        [1, 4, 2, 3, 5]
+
+    List contains negative integers:
+        >>> my_list = MyList()
+        >>> my_list.append(-1)
+        >>> my_list.append(-2)
+        >>> my_list.append(-3)
+        >>> my_list.append(-4)
+        >>> my_list.append(-5)
+        >>> print(my_list)
+        [-1, -2, -3, -4, -5]
+        >>> my_list.print_sorted()
+        [-5, -4, -3, -2, -1]
+        >>> print(my_list)
+        [-1, -2, -3, -4, -5]
+        
+    List contains duplicate integers:
+        >>> my_list = MyList()
+        >>> my_list.append(4)
+        >>> my_list.append(4)
+        >>> my_list.append(2)
+        >>> my_list.append(5)
+        >>> my_list.append(1)
+        >>> print(my_list)
+        [4, 4, 2, 5, 1]
+        >>> my_list.print_sorted()
+        [1, 2, 4, 4, 5]
+        >>> print(my_list)
+        [4, 4, 2, 5, 1]
+
+    List contains only one integer:
+        >>> my_list = MyList()
+        >>> my_list.append(1)
+        >>> print(my_list)
+        [1]
+        >>> my_list.print_sorted()
+        [1]
+        >>> 
+
+    List is empty:
+        >>> my_list = MyList()
+        >>> print(my_list)
+        []
+        >>> my_list.print_sorted()
+        []
+        >>> 
+
+    List contains different data types:
+        >>> my_list = MyList()
+        >>> my_list.append(2)
+        >>> my_list.append("blah")
+        >>> my_list.append(1)
+        >>> my_list.append(5)
+        >>> print(my_list)
+        [2, 'blah', 1, 5]
+        >>> my_list.print_sorted()
+        Traceback (most recent call last):
+        ...
+        TypeError: '<' not supported between instances of 'str' and 'int'
