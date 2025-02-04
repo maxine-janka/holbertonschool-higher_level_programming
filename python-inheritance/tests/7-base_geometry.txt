@@ -1,48 +1,39 @@
-The ``7-base_geometry`` module
-==========================
-This module defines a class ``BaseGeometry``.
-
-Using ``integer_validator``
----------------------
-``BaseGeometry`` defines a public instance method ``integer_validator(self, name, value)``.
-It validates whether ``value`` is an integer.
-
-First import the class ``BaseGeometry`` from the module ``7-base_geometry``
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
-
-Test cases:
-
-    Test empty area method:
-        >>> bg = BaseGeometry()
-        >>> bg.area()
-        Traceback (most recent call last):
-        Exception: area() is not implemented
-    
-    No arguments:
-        >>> bg = BaseGeometry()
-        >>> bg.integer_validator()
-        Traceback (most recent call last):
-        TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
-    String and integer:
-        >>> bg = BaseGeometry()
-        >>> bg.integer_validator("my_int", 12)
-    
+===========================
+How to use 7-base_geometry.py
+===========================
+Module containing a BaseGeometry class
+Usage
+-----
+Define a class with two public instance methods
+First import ``BaseGeometry`` from the ``7-base_geometry.py`` file:
+    >>> base_geo = __import__('7-base_geometry').BaseGeometry
+Tests:
+::
+    Standard Case:
+    >>> b_g = base_geo()
+    >>> b_g.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+::
     integer validator introduced:
-        >>> bg = BaseGeometry()
-        >>> bg.integer_validator("age", -1)
-        Traceback (most recent call last):
-        ValueError: age must be greater than 0
+    >>> b_g = base_geo()
+    >>> b_g.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+::
+    integer validator introduced:
+    >>> b_g = base_geo()
+    >>> b_g.integer_validator("age", 2)
     
-    Test with 0:
-        >>> bg = BaseGeometry()
-        >>> bg.integer_validator("age", 0)
-        Traceback (most recent call last):
-        ValueError: age must be greater than 0
-    
-    string and string:
-        >>> bg = BaseGeometry()
-        >>> bg.integer_validator("name", "John")
-        Traceback (most recent call last):
-        TypeError: name must be an integer
+::
+    integer validator introduced:
+    >>> b_g = base_geo()
+    >>> b_g.integer_validator("age", -1)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+::
+    integer validator introduced:
+    >>> b_g = base_geo()
+    >>> b_g.integer_validator("age" , "bye")
+    Traceback (most recent call last):
+    TypeError: age must be an integer
