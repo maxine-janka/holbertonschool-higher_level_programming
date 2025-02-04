@@ -14,7 +14,7 @@ class Rectangle(BaseGeometry):
         Args:
         width (int): The width of a new Rectangle.
         height (int): The height of a new Rectangle.
-        
+
         """
         super().integer_validator("width", width)
         self.__width = width
@@ -26,4 +26,5 @@ class Rectangle(BaseGeometry):
         return self.__height * self.__width
 
     def __str__(self):
-        return "[Rectangle] {} / {}".format(self.__width, self.__height)
+        """Returns a string representation of width / height of a Rectangle"""
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
