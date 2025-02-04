@@ -7,7 +7,7 @@ checks if the object is an instance of a class that inherited
 
 def inherits_from(obj, a_class):
     """Check if an object is an instance of a class (direct or indirect)"""
-    if isinstance(obj, a_class) or issubclass(type(obj), a_class):
+    if issubclass(type(obj), a_class) and not (type(obj) is a_class):
         return True
     else:
         return False
