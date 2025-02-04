@@ -3,7 +3,7 @@ The ``7-base_geometry`` module
 This module define a class ``BaseGeometry``
 
 Using ``integer_validator``
----------------------
+--------------------------
 ``BaseGeometry`` defines a public instance method ``integer_validator(name, value)``
 to check if ``value`` is a positive integer.``
 
@@ -85,5 +85,3 @@ Tests cases:
         Traceback (most recent call last):
         ...
         TypeError: age must be an integer
-
-
