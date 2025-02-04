@@ -31,6 +31,13 @@ Test cases:
         ...
         ValueError: age must be greater than 0
     
+    Test with 0:
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", 0)
+        Traceback (most recent call last):
+        ...
+        ValueError: age must be greater than 0
+    
     string and string:
         >>> bg = BaseGeometry()
         >>> bg.integer_validator("name", "John")
