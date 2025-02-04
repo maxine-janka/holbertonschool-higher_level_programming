@@ -25,9 +25,10 @@ Test cases:
         >>> bg.integer_validator("my_int", 12)
     
     integer validator introduced:
-        >>> b_g = base_geo()
-        >>> b_g.integer_validator("age", -1)
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", -1)
         Traceback (most recent call last):
+        ...
         ValueError: age must be greater than 0
     
     string and string:
