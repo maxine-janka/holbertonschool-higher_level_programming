@@ -6,8 +6,11 @@ Usage
 -----
 Define a class with two public instance methods
 First import ``BaseGeometry`` from the ``7-base_geometry.py`` file:
+
     >>> base_geo = __import__('7-base_geometry').BaseGeometry
+
 Tests:
+
 ::
     Standard Case:
     >>> b_g = base_geo()
