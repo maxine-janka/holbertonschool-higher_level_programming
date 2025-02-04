@@ -1,0 +1,32 @@
+The ``7-base_geometry`` module
+==========================
+This module defines a class ``BaseGeometry``.
+
+Using ``integer_validator``
+---------------------
+``BaseGeometry`` defines a public instance method ``integer_validator(self, name, value)``.
+It validates whether ``value`` is an integer.
+
+First import the class ``BaseGeometry`` from the module ``7-base_geometry``
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+Test cases:
+
+    String and integer:
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("my_int", 12)
+    
+    string and negative integer:
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", -4)
+        Traceback (most recent call last):
+        ...
+        ValueError: <name> must be greater than 0
+    
+    string and string:
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("name", "John")
+        Traceback (most recent call last):
+        ...
+        TypeError: <name> must be an integer
