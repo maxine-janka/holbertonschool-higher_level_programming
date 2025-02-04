@@ -13,6 +13,13 @@ First import the class ``BaseGeometry`` from the module ``7-base_geometry``
 
 Test cases:
 
+    Test empty area method:
+        >>> bg = BaseGeometry()
+        >>> bg.area()
+        Traceback (most recent call last):
+        ...
+        Exception: area() is not implemented
+
     String and integer:
         >>> bg = BaseGeometry()
         >>> bg.integer_validator("my_int", 12)
@@ -22,11 +29,19 @@ Test cases:
         >>> bg.integer_validator("age", -4)
         Traceback (most recent call last):
         ...
-        ValueError: <name> must be greater than 0
+        ValueError: age must be greater than 0
     
     string and string:
         >>> bg = BaseGeometry()
         >>> bg.integer_validator("name", "John")
         Traceback (most recent call last):
         ...
-        TypeError: <name> must be an integer
+        TypeError: name must be an integer
+    
+    No arguments:
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator()
+        Traceback (most recent call last):
+        ...
+        TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
