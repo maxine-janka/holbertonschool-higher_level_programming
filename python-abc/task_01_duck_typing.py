@@ -16,10 +16,7 @@ class Shape(ABC):
 
 class Circle(Shape):
     def __init__(self, radius):
-        if radius < 0:
-            raise ValueError("Radius must be greater than 0")
-        self.__radius = radius
-
+        self.__radius = abs(radius)
 
     def area(self):
         return pi * self.__radius * self.__radius
@@ -30,8 +27,6 @@ class Circle(Shape):
 
 class Rectangle(Shape):
     def __init__(self, width, height):
-        if width < 0 or height < 0:
-            raise ValueError("Width and height must be greater than 0.")
         self.__width = width
         self.__height = height
 
