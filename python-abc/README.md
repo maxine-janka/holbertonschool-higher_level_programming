@@ -1,0 +1,1 @@
+This projects contains tasks for programming in Python - Abstract Classes and Interfaces. For Holberton School Australia. By Maxine Janka.
