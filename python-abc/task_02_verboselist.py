@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""This module customsizes the behaviour of methods in list"""
+
+
 class VerboseList(list):
     """Inherits from list and overrides methods that modify the list"""
 
