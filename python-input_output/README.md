@@ -1,0 +1,1 @@
+This projects contains tasks for programming in Python - Input/Output. By Maxine Janka. For Holberton School Australia.
