@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""A fucntion that appends a string to a text file"""
 
 
 def append_write(filename="", text=""):
