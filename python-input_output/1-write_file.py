@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""A function that overwrites a files contents"""
 
 
 def write_file(filename="", text=""):
