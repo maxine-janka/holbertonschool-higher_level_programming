@@ -15,8 +15,12 @@ class Student:
         if attrs is None:
             return self.__dict__
         else:
+            #  To store filtered attrs
             new_dict = {}
-            for key in attrs:
-                if hasattr(self, key):
-                    new_dict[key] = getattr(self, key)
+            # Iterate each attr in list
+            for att in attrs:
+                #  Check if attr exists
+                if hasattr(self, att):
+                    # Store its value in the new dict
+                    new_dict[att] = getattr(self, att)
             return new_dict
