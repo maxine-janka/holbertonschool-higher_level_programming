@@ -20,7 +20,7 @@ class CustomObject:
         """Serializes the current instance of an object"""
         try:
             with open(filename, mode='wb') as file:
-                return pickle.dump(self, file) #  pass in file and object
+                return pickle.dump(self, file)  # pass in file and object
         except pickle.PickleError:
             return None
 
@@ -30,7 +30,5 @@ class CustomObject:
         try:
             with open(filename, mode='rb') as file:
                 return pickle.load(file)
-        except pickle.UnpicklingError:
-            return None
-        except FileExistsError:
+        except (pickle.UnpicklingError, FileExistsError, OSError):
             return None
