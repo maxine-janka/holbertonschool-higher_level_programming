@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Serialize and Deserialize using pickle"""
+"""Serialize and Deserialize a custom python object using pickle"""
 import pickle
 
 
@@ -20,7 +20,7 @@ class CustomObject:
         """Serializes the current instance of an object"""
         try:
             with open(filename, mode='wb') as file:
-                return pickle.dump(file)
+                return pickle.dump(self, file) #  pass in file and object
         except pickle.PickleError:
             return None
 
