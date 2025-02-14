@@ -30,5 +30,5 @@ class CustomObject:
         try:
             with open(filename, mode='rb') as file:
                 return pickle.load(file)
-        except (pickle.UnpicklingError, FileExistsError, OSError):
+        except (pickle.UnpicklingError, FileExistsError, OSError, EOFError):
             return None
