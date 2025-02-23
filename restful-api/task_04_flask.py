@@ -7,7 +7,7 @@ from flask import request
 
 app = Flask(__name__)
 
-users = {"jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"}, "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}}
+users = {}
 
 @app.route('/')
 def home():
@@ -39,10 +39,14 @@ def add_user():
     """Adds a new user to the 'users' dictionary"""
     # Get JSON data from post request bodyand return dict
     new_user_data = request.get_json()
-    new_username = new_user_data.get("username") # get the value of the key called username
+
+    # get the value of the key called username
+    new_username = new_user_data.get("username") 
+
     # Return error if no data or username provided
     if not new_user_data or "username" not in new_user_data:
         return jsonify({"error": "Username is required"}), 400
+    
     # If valid data, store new users data in the users dictionary
     users[new_username] = {
         "username": new_username,
