@@ -1,0 +1,1 @@
+This projects contains tasks for SQL - More Queries . For Holberton School Australia. By Maxine Janka
