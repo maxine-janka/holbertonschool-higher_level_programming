@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module"""
+"""A simple API using the http.server module"""
 
 import http.server
 import json
