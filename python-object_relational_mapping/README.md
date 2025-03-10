@@ -1,0 +1,1 @@
+This projects contains tasks for programming in Python - Object-relational mapping. Holberton School Australia. By Maxine Janka
