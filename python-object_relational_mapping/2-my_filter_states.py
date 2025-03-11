@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Displays all values iin the 'states' table from the database
-   hbtn_0e_0_usa, where the 'name; matches the state name passed in as a argument
+   hbtn_0e_0_usa, where the 'name; matches the state name passed 
+   in as a argument.
 """
 
 import sys
@@ -18,7 +19,7 @@ if __name__ == "__main__":
     )
 
     # Get state name from the command line
-    state_name=sys.argv[4]
+    state_name = sys.argv[4]
 
     # Like a pointer that sends commands to the db to retrieve the results
     cursor = db.cursor()
