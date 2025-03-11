@@ -26,7 +26,8 @@ if __name__ == "__main__":
 
     # Cursor sends query
     cursor.execute("SELECT id, name FROM states \
-                   WHERE name LIKE BINARY '{}' ORDER BY id ASC".format(state_name))
+                   WHERE name LIKE BINARY '{}' \
+                   ORDER BY id ASC".format(state_name))
 
     # fetch all rows from states table & store in 'states' as a list of tuples
     states = cursor.fetchall()
