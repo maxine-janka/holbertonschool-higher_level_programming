@@ -21,7 +21,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Cursor sends query to db
-    cursor.execute("SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cursor.execute("SELECT id, name FROM states"
+                   "WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
 
     # fetch all rows from states table & store in 'states' as a list of tuples
     states = cursor.fetchall()
