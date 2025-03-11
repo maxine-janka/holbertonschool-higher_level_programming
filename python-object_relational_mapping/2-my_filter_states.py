@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Displays all values iin the 'states' table from the database
-   hbtn_0e_0_usa, where the 'name; matches the state name passed 
+   hbtn_0e_0_usa, where the 'name; matches the state name passed
    in as a argument.
 """
 
