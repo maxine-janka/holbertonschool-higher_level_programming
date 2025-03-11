@@ -36,7 +36,6 @@ if __name__ == "__main__":
     string_of_cities = ", ".join(city[0] for city in cities)
     print(string_of_cities)
 
-
     # Close the cursor and free up resources, close db connection
     cursor.close()
     db.close()
