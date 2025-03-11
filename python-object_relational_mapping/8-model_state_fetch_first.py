@@ -22,6 +22,6 @@ if __name__ == "__main__":
     session = create_session_obj()  # Instantiate a session
 
     # Query, print and close
-    for state in session.query(State).first():
-        print("{}: {}".format(state.id, state.name))
+    state = session.query(State).first()
+    print("{}: {}".format(state.id, state.name))
     session.close()
