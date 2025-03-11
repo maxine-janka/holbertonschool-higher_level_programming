@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # Cursor sends query to db
     cursor.execute("SELECT id, name FROM states ORDER BY id ASC")
 
-    # fetch all rows from states table and store in 'states' as a list of tuples
+    # fetch all rows from states table & store in 'states' as a list of tuples
     states = cursor.fetchall()
 
     # Iterate rows and print
