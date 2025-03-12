@@ -25,6 +25,6 @@ if __name__ == "__main__":
     session = create_session_obj()  # Instantiate a session
 
     # Query, print and close
-    for city, state in session.query(City, State).join(State).order_by(City.id).all():
+    for city, state in session.query(City, State).join(State, State.id == City.state_id).order_by(City.id).all():
         print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()
