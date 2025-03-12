@@ -23,11 +23,9 @@ if __name__ == "__main__":
     create_session_obj = sessionmaker(bind=engine)
     session = create_session_obj()  # Instantiate a session
 
-    state = session.query(State).filter(State.id == 2)
+    update_state = session.query(State).get(2)
+    update_state.name = "New Mexico"
 
-    if state:
-        state_name = State(name="New Mexico")
-        session.add(state_name)
-        session.commit()
+    session.commit()
 
     session.close()
