@@ -5,7 +5,7 @@
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
+from model_state import State
 
 # Don't execute when imported
 if __name__ == "__main__":
@@ -16,7 +16,8 @@ if __name__ == "__main__":
         pool_pre_ping=True
     )
     # Creates a table from State class that inherits from Base
-    Base.metadata.create_all(bind=engine)
+    # Dont need this line, it will create a table if its not there
+    # Base.metadata.create_all(bind=engine)
 
     # Create interactive session with DB to make queries
     create_session_obj = sessionmaker(bind=engine)
