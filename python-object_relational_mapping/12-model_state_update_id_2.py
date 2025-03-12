@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Changes the name of the state where the state.id = 2 
+"""Changes the name of the state where the state.id = 2
    to 'New Mexico' the database hbtn_0e_6_usa"""
 
 import sys
