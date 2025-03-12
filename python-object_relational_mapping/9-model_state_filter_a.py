@@ -23,6 +23,6 @@ if __name__ == "__main__":
     session = create_session_obj()  # Instantiate a session
 
     # Query, print and close
-    for state in session.query(State).filter(State.name.contains('a')).order_by(State.id).asc.all():
+    for state in session.query(State).filter(State.name.contains('a')):
         print("{}: {}".format(state.id, state.name))
     session.close()
