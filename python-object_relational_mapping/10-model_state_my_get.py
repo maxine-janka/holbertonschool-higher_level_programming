@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
     # Query, print and close
     for state in session.query(State).filter(State.name == state_name):
-        if state_name is not None:
+        if state_name is not None and state is not None:
             print("{}".format(state.id))
         else:
             print("Nothing found")
