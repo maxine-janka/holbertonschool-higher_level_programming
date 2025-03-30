@@ -21,8 +21,10 @@ def contact():
 def items():
      # read the JSON file
     with open('items.json', 'r') as items_file:
+        # Gets a dictionary
         item_data = json.load(items_file)
 
+    # item.data.get extracts the list and passes to template
     return render_template('items.html', items=item_data.get("items"))
 
 if __name__ == '__main__':
