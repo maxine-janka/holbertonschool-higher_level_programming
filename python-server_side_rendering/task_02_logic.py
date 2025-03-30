@@ -21,7 +21,7 @@ def contact():
 def items():
      # read the JSON file
     with open('items.json', 'r') as items_file:
-        # Gets a dictionary
+        # Gets the dictionary with the list
         item_data = json.load(items_file)
 
     # item.data.get extracts the list and passes to template
