@@ -70,7 +70,7 @@ def products():
         # Fetch the data
         data = cursor.fetchall()
         if not data:
-            return render_template('product_display.html', error="Product does not exist")
+            return render_template('product_display.html', error="Product not found")
         # Put db table data into list
         product_data = []
         for product in data:
