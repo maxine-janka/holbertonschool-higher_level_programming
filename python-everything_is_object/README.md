@@ -1,0 +1,1 @@
+This projects contains tasks for Python - Everything is object. For Holberton School Australia. By Maxine Janka.
